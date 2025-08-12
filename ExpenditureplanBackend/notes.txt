@@ -1,0 +1,6 @@
+//FIND
+To find all data from that schema
+//Insert
+Inset one data obj
+//Insert Many
+Insert an array
