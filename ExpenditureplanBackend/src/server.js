@@ -2,9 +2,16 @@ import express from 'express'
 import mongoose from 'mongoose'
 import budgetRouter from './router/budgetRouter.js'
 import incomeRouter from './router/incomeRouter.js';
+import cors from 'cors';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
+
+app.use(cors({
+  origin: '*', // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 mongoose.connect(`mongodb+srv://sai:sai@cluster1.jo5x8o3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1`, {
   useNewUrlParser: true,
